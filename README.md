@@ -1,4 +1,4 @@
-# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/saadpasta/developerFolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/saadpasta/developerFolio)](https://github.com/saadpasta/developerFolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
+# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/i-mwangi/my-portfolio-?color=blue)](https://github.com/i-mwangi/my-portfolio-/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/i-mwangi/my-porfolio-)](https://github.com/saadpasta/developerFolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 ## A clean, beautiful and responsive portfolio template for Developers!
 
@@ -12,9 +12,9 @@
 
 Just change `src/portfolio.js` to get your personal portfolio. Customize portfolio theme by using your own color scheme globally in the  `src/_globalColor.scss` file. Feel free to use it as-is or personalize it as much as you want.
 
-If you'd like to **contribute** and make this much better for other users, have a look at [Issues](https://github.com/saadpasta/developerFolio/issues).
+If you'd like to **contribute** and make this much better for other users, have a look at [Issues](https://github.com/i-mwangi/my-portfolio-/issues).
 
-Created something awesome for your fork of the portfolio and want to share it? Feel free to open a [pull request](https://github.com/saadpasta/developerFolio/pulls).
+Created something awesome for your fork of the portfolio and want to share it? Feel free to open a [pull request](https://github.com/i-mwangi/my-portfolio-/pulls).
 
 ## Table of Contents
 - [Sections](#sections)
@@ -44,7 +44,6 @@ Created something awesome for your fork of the portfolio and want to share it? F
 ✔️ Twitter Timeline\
 ✔️ GitHub Profile
 
-To view a live example, **[click here](https://developerfolio.js.org/)**.
 
 
 ## Getting Started
@@ -72,10 +71,10 @@ From your command line, clone and run developerFolio:
 
 ```bash
 # Clone this repository
-git clone https://github.com/saadpasta/developerFolio.git
+git clonehttps://github.com/i-mwangi/my-portfolio-
 
 # Go into the repository
-cd developerFolio
+cd my-porfolio
 
 # Setup default environment variables
 
@@ -129,7 +128,7 @@ If you are seeing something as shown below, follow these [instructions](https://
 
 ![ERROR](https://i.imgur.com/Hj6mu1K.png)
 
-If the above solution still doesn't work, visit the [wiki page](https://github.com/saadpasta/developerFolio/wiki/Github-Setup-For-Open-Source-Projects).
+If the above solution still doesn't work, visit the [wiki page](https://github.com/i-mwangi/my-porfolio-/wiki/Github-Setup-For-Open-Source-Projects).
 
 ## Linking blogs section to Medium
 
@@ -155,19 +154,18 @@ Set `displayMediumBlogs` to true or false in portofolio.js to display fetched Me
 
 const greeting = {
   /* Your Summary And Greeting Section */
-  title: "Hi all I'm Saad",
+  title: "Hi all I'm Henry",
   subTitle: emoji("A passionate Full Stack Software Developer 🚀"),
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
+  resumeLink: "https://drive.google.com/file/d/1sPp2XUz1F4oD6QeBYZYCFnbxpPfraWw7/view?usp=sharing"
 };
 
 const socialMediaLinks = {
   /* Your Social Media Link */
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7"
-};
+  github: "https://github.com/i-mwangi",
+  linkedin: "www.linkedin.com/in/henry-mwangi-768b3b299",
+  gmail: "mwangihenry336@gmail.com",
+  gitlab: "https://gitlab.com/i-mwangi",
+  
 
 
 const skillsSection = { .... }
