@@ -3,10 +3,11 @@ const https = require("https");
 process = require("process");
 require("dotenv").config();
 
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
-const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
-const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA;
-const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
+// Hardcode values directly for testing
+const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN || "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";
+const GITHUB_USERNAME = process.env.GITHUB_USERNAME || "i-mwangi";
+const USE_GITHUB_DATA = process.env.USE_GITHUB_DATA || "true";
+const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME || "mwangihenry336";
 
 const ERR = {
   noUserName:
@@ -16,8 +17,9 @@ const ERR = {
   requestFailedMedium:
     "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
 };
+
 if (USE_GITHUB_DATA === "true") {
-  if (GITHUB_USERNAME === undefined) {
+  if (!GITHUB_USERNAME) {
     throw new Error(ERR.noUserName);
   }
 
@@ -94,11 +96,19 @@ if (USE_GITHUB_DATA === "true") {
   req.end();
 }
 
-if (MEDIUM_USERNAME !== undefined) {
+// Fix for Medium section - the issue is here
+if (MEDIUM_USERNAME) {
   console.log(`Fetching Medium blogs data for ${MEDIUM_USERNAME}`);
+  
+  // Remove @ symbol if it exists in the username
+  const cleanMediumUsername = MEDIUM_USERNAME.replace('@', '');
+  
+  // Encode the URL properly
+  const mediumFeedUrl = encodeURIComponent(`https://medium.com/feed/@${cleanMediumUsername}`);
+  
   const options = {
     hostname: "api.rss2json.com",
-    path: `/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`,
+    path: `/v1/api.json?rss_url=${mediumFeedUrl}`,
     port: 443,
     method: "GET"
   };
@@ -108,7 +118,7 @@ if (MEDIUM_USERNAME !== undefined) {
 
     console.log(`statusCode: ${res.statusCode}`);
     if (res.statusCode !== 200) {
-      throw new Error(ERR.requestMediumFailed);
+      throw new Error(ERR.requestFailedMedium);
     }
 
     res.on("data", d => {
