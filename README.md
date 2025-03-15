@@ -256,7 +256,7 @@ For more information, read [hosting on Netlify](https://create-react-app.dev/doc
 
 
 ## For the Future
-If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/saadpasta/developerFolio/pulls).
+If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/i-mwangi/my-portfolio-/pulls).
 
 - Connect with LinkedIn to get Summary, Skills, Education and Experience
 
